@@ -8,11 +8,13 @@ uuidv4();
 export const TodoWrapper = () => {
     const [todos, setTodos] = useState([]);
 
-    // adds an item
+    // Adds an item
     const addTodo = (todo) => {
-        setTodos([...todos, 
+        if (todo.trim() !== "") {
+            setTodos([...todos, 
             {id: uuidv4(), task: todo, completed: false, isEditing: false}]);
-        console.log(todos)
+            console.log(todos)
+        }
     }
 
     const toggleComplete = id => {

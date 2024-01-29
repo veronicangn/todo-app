@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 export const EditTodoForm = ({editTodo, task}) => {
-    // default value is the initial list item
+    // Default value is the initial list item
     const [value, setValue] = useState(task.task)
 
     const handleSubmit = e => {
@@ -9,9 +9,10 @@ export const EditTodoForm = ({editTodo, task}) => {
 
         editTodo(value, task.id);
 
-        // clear form
+        // Clears form
         setValue("")
-    }
+    };
+
   return (
     <form className='TodoForm' onSubmit={handleSubmit}>
         <input type="text" className='todo-input' 

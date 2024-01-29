@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Jost', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,7 +39,7 @@ h1 {
 .todo-input {
   outline: none;
   background: none;
-  border: 1px solid #fad5fb;
+  border: 1px solid #fce8fd;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -49,21 +49,27 @@ h1 {
 
 .todo-input::placeholder {
   color: #ffffff4d;
+  font-size: 15px;
 }
 
 .todo-btn {
-  background: #fad5fb;
+  background: #fae6fb;
   color: black;
   border: none;
   padding: 0.55rem;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.todo-btn:hover {
+  color: palevioletred;
 }
 
 .Todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fad5fb;
+  background: #feecff;
   color: black;
   padding: 0.75rem 1rem;
   border-radius: 5px;
@@ -77,10 +83,15 @@ h1 {
 .incompleted {
   color: black;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.incompleted:hover {
+  color: palevioletred;
 }
 
 .completed {
-  color: #c5aeff;
+  color: palevioletred;
   text-decoration: line-through;
   cursor: pointer;
 }
@@ -88,4 +99,9 @@ h1 {
 .edit-icon,
 .delete-icon {
   cursor: pointer;
+  transition: color 0.1s ease;
+}
+
+.edit-icon:hover,.delete-icon:hover {
+  color: palevioletred;
 }
